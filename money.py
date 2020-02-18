@@ -8,6 +8,11 @@ class Currency:
     """
 
     def __init__(self, name, code, symbol=None, digits=2):
+        self.name = name
+        self.code = code
+        self.symbol = symbol
+        self.digits = digits
+        
         """
         Parameters:
         - name -- the English name of the currency
@@ -15,9 +20,11 @@ class Currency:
         - symbol - optional symbol used to designate currency
         - digits -- number of significant digits used
         """
-        pass
 
     def __str__(self):
+        return f'{self.code}'
+    
+        
         """
         Should return the currency code, or code with symbol in parentheses.
         """
@@ -38,6 +45,8 @@ class Money:
     """
 
     def __init__(self, amount, currency):
+        self.amount = amount
+        self.currency = currency
         """
         Parameters:
         - amount -- quantity of currency
